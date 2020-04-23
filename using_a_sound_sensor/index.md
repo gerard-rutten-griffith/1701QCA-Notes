@@ -22,7 +22,7 @@ Setting up the Micro:bit to write out the analogue value to the serial port and 
 ## Test code
 Looking at the analogue output, it seems that just measuring the analogue output would be relatively useless to detect sound levels.  What is needed is a way of measuring the _difference_ in analogue values, ie. how much it changes... the amplitude of the changes.  
 
-A crude way to do this is to measure the difference in the analogue reading to the previous analogue reading.  The following code is not the correct way to do this, but it demonstrates the concept.  The following image shows the Micro:bit code.
+A crude way to do this is to measure the difference of the analogue reading to the previous analogue reading.  The following code is not the correct way to do this, but it demonstrates the concept.
 
 ![Sample Code](AnalogueTest.png)
 
@@ -33,13 +33,13 @@ let lastValue = pins.analogReadPin(AnalogPin.P0)
 basic.forever(function () {
     thisValue = pins.analogReadPin(AnalogPin.P0)
     led.plotBarGraph(
-    Math.abs(thisValue - lastValue),
-    50
+        Math.abs(thisValue - lastValue),
+        50
     )
     lastValue = thisValue
 })
 ``` 
-## Test Video
+## Test video
 <video src="IMG_1467.mp4" width="512" height="288" controls preload></video>
 
 
