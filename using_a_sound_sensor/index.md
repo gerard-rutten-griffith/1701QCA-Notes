@@ -25,7 +25,7 @@ A crude way to do this is to measure the difference in the analogue reading to t
 ![Sample Code](AnalogueTest.png)
 
 ... and in JavaScript:
-```
+``` Javascript
 let thisValue = 0
 let lastValue = pins.analogReadPin(AnalogPin.P0)
 basic.forever(function () {
@@ -36,8 +36,8 @@ basic.forever(function () {
     )
     lastValue = thisValue
 })
-```
+``` 
 ## Test
-<video src="IMG_1467.mp4" width="640" height="480" controls preload></video>
+<video src="IMG_1467.mp4" width="512" height="288" controls preload></video>
 
 
