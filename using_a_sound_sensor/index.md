@@ -16,12 +16,14 @@ The pins are generally labelled: A0, G, + and D0.
 
 ## Analysis of the analogue output
 I set up the Micro:bit to write out the analogue value to the serial port and then plotted the value on a chart while intermittently playing music nearby.  This is the output:
-![Image](missingimage.png)
+![Plot of analogue output](AnaloguePlot.png)
 
 ## Test code
 Looking at the analogue output, it seems that just meansuring the analogue output would be relatively useless to detect sound levels.  What is needed is a way of measuring the _difference_ in analogue values, ie. how much it changes - the amplitude of the changes.
 A crude way to do this is to measure the difference in the analogue reading to the previous reading.  This is not the correct way to do this, but it demonstrates the concept.  The following image shows the Micro:bit code.
-![Image](missingimage.png)
+
+![Sample Code](AnalogueTest.png)
+
 ... and in JavaScript:
 ```
 let thisValue = 0
@@ -36,6 +38,6 @@ basic.forever(function () {
 })
 ```
 ## Test
-<video src="potentiometerv.MP4" width="640" height="480" controls preload></video>
+<video src="IMG_1467.mp4" width="640" height="480" controls preload></video>
 
 
